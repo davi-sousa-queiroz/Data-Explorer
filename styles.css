@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "Nunito Sans", sans-serif;
 }
 
 body {
@@ -33,14 +34,37 @@ nav {
 }
 
 .data-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     width: min(100%, 1100px);
     min-height: min(60vh, 700px);
+    padding: clamp(2rem, 6vw, 5rem);
     border: 2px solid rgba(52, 32, 26, 0.783);
     border-radius: 1.25rem;
     background: rgba(255, 255, 255, 0.72);
     box-shadow: 0 20px 60px rgba(0, 8, 49, 0.12);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    text-align: center;
+}
+
+.heading {
+    color: rgba(45, 33, 21, 0.548);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.tutorial {
+    max-width: 36rem;
+    color: rgba(50, 33, 25, 0.51);
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 nav > ul {
@@ -53,10 +77,10 @@ nav > ul {
 }
 
 .logo {
-    color: #000831;
+    color: rgba(0, 8, 49, 0.78);
     font-size: 1.35rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
     white-space: nowrap;
 }
 
@@ -70,9 +94,9 @@ nav > ul {
 .link {
     padding: 0.65rem 0.8rem;
     border-radius: 999px;
-    color: #333;
+    color: rgba(51, 51, 51, 0.78);
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 400;
     white-space: nowrap;
     cursor: pointer;
     transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
