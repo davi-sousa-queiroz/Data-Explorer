@@ -1,0 +1,5 @@
+const countriesTab = document.querySelector('.countries')
+const animalsTab = document.querySelector('.animals')
+const spaceTab = document.querySelector('.space')
+const gamesTab = document.querySelector('.games')
+const programmingTab = document.querySelector('.programming')
