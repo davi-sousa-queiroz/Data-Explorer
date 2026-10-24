@@ -1,1 +1,164 @@
  
+[
+  {
+    "name": "Brazil",
+    "capital": "Brasília",
+    "continent": "South America",
+    "population": 212600000,
+    "areaKm2": 8515767,
+    "languages": ["Portuguese"],
+    "currency": {
+      "name": "Brazilian real",
+      "code": "BRL"
+    },
+    "flag": "🇧🇷"
+  },
+  {
+    "name": "United States",
+    "capital": "Washington, D.C.",
+    "continent": "North America",
+    "population": 340100000,
+    "areaKm2": 9833517,
+    "languages": ["English"],
+    "currency": {
+      "name": "United States dollar",
+      "code": "USD"
+    },
+    "flag": "🇺🇸"
+  },
+  {
+    "name": "Canada",
+    "capital": "Ottawa",
+    "continent": "North America",
+    "population": 41400000,
+    "areaKm2": 9984670,
+    "languages": ["English", "French"],
+    "currency": {
+      "name": "Canadian dollar",
+      "code": "CAD"
+    },
+    "flag": "🇨🇦"
+  },
+  {
+    "name": "Mexico",
+    "capital": "Mexico City",
+    "continent": "North America",
+    "population": 130900000,
+    "areaKm2": 1964375,
+    "languages": ["Spanish"],
+    "currency": {
+      "name": "Mexican peso",
+      "code": "MXN"
+    },
+    "flag": "🇲🇽"
+  },
+  {
+    "name": "United Kingdom",
+    "capital": "London",
+    "continent": "Europe",
+    "population": 69200000,
+    "areaKm2": 243610,
+    "languages": ["English"],
+    "currency": {
+      "name": "Pound sterling",
+      "code": "GBP"
+    },
+    "flag": "🇬🇧"
+  },
+  {
+    "name": "France",
+    "capital": "Paris",
+    "continent": "Europe",
+    "population": 66600000,
+    "areaKm2": 551695,
+    "languages": ["French"],
+    "currency": {
+      "name": "Euro",
+      "code": "EUR"
+    },
+    "flag": "🇫🇷"
+  },
+  {
+    "name": "Germany",
+    "capital": "Berlin",
+    "continent": "Europe",
+    "population": 83500000,
+    "areaKm2": 357022,
+    "languages": ["German"],
+    "currency": {
+      "name": "Euro",
+      "code": "EUR"
+    },
+    "flag": "🇩🇪"
+  },
+  {
+    "name": "Japan",
+    "capital": "Tokyo",
+    "continent": "Asia",
+    "population": 123000000,
+    "areaKm2": 377975,
+    "languages": ["Japanese"],
+    "currency": {
+      "name": "Japanese yen",
+      "code": "JPY"
+    },
+    "flag": "🇯🇵"
+  },
+  {
+    "name": "China",
+    "capital": "Beijing",
+    "continent": "Asia",
+    "population": 1408000000,
+    "areaKm2": 9596961,
+    "languages": ["Mandarin Chinese"],
+    "currency": {
+      "name": "Renminbi",
+      "code": "CNY"
+    },
+    "flag": "🇨🇳"
+  },
+  {
+    "name": "India",
+    "capital": "New Delhi",
+    "continent": "Asia",
+    "population": 1450000000,
+    "areaKm2": 3287263,
+    "languages": ["Hindi", "English"],
+    "currency": {
+      "name": "Indian rupee",
+      "code": "INR"
+    },
+    "flag": "🇮🇳"
+  },
+  {
+    "name": "Australia",
+    "capital": "Canberra",
+    "continent": "Oceania",
+    "population": 27100000,
+    "areaKm2": 7692024,
+    "languages": ["English"],
+    "currency": {
+      "name": "Australian dollar",
+      "code": "AUD"
+    },
+    "flag": "🇦🇺"
+  },
+  {
+    "name": "South Africa",
+    "capital": "Pretoria",
+    "continent": "Africa",
+    "population": 64000000,
+    "areaKm2": 1219090,
+    "languages": [
+      "Zulu",
+      "Xhosa",
+      "Afrikaans",
+      "English"
+    ],
+    "currency": {
+      "name": "South African rand",
+      "code": "ZAR"
+    },
+    "flag": "🇿🇦"
+  }
+]
