@@ -1,0 +1,245 @@
+
+[
+  {
+    "id": 1,
+    "name": "Dragon Slayer Sword",
+    "game": "Fantasy Quest",
+    "category": "Weapon",
+    "rarity": "Legendary",
+    "levelRequired": 50,
+    "value": 15000,
+    "isTradable": true,
+    "stats": {
+      "damage": 250,
+      "defense": 0,
+      "durability": 500
+    },
+    "description": "A legendary sword forged in dragon fire.",
+    "emoji": "⚔️"
+  },
+  {
+    "id": 2,
+    "name": "Shadow Dagger",
+    "game": "Fantasy Quest",
+    "category": "Weapon",
+    "rarity": "Epic",
+    "levelRequired": 25,
+    "value": 6500,
+    "isTradable": true,
+    "stats": {
+      "damage": 120,
+      "defense": 0,
+      "durability": 300
+    },
+    "description": "A lightweight dagger designed for stealth attacks.",
+    "emoji": "🗡️"
+  },
+  {
+    "id": 3,
+    "name": "Phoenix Armor",
+    "game": "Fantasy Quest",
+    "category": "Armor",
+    "rarity": "Legendary",
+    "levelRequired": 45,
+    "value": 12000,
+    "isTradable": false,
+    "stats": {
+      "damage": 0,
+      "defense": 180,
+      "durability": 800
+    },
+    "description": "Armor decorated with feathers that glow like fire.",
+    "emoji": "🛡️"
+  },
+  {
+    "id": 4,
+    "name": "Health Potion",
+    "game": "Fantasy Quest",
+    "category": "Consumable",
+    "rarity": "Common",
+    "levelRequired": 1,
+    "value": 50,
+    "isTradable": true,
+    "stats": {
+      "healing": 100
+    },
+    "description": "Restores health when consumed.",
+    "emoji": "🧪"
+  },
+  {
+    "id": 5,
+    "name": "Diamond Pickaxe",
+    "game": "Block World",
+    "category": "Tool",
+    "rarity": "Rare",
+    "levelRequired": 10,
+    "value": 1200,
+    "isTradable": true,
+    "stats": {
+      "miningPower": 8,
+      "durability": 1561
+    },
+    "description": "A durable pickaxe made from brilliant blue diamonds.",
+    "emoji": "⛏️"
+  },
+  {
+    "id": 6,
+    "name": "Enchanted Golden Apple",
+    "game": "Block World",
+    "category": "Consumable",
+    "rarity": "Epic",
+    "levelRequired": 1,
+    "value": 800,
+    "isTradable": true,
+    "stats": {
+      "healing": 200,
+      "bonusEffects": 4
+    },
+    "description": "A magical apple that grants powerful temporary effects.",
+    "emoji": "🍎"
+  },
+  {
+    "id": 7,
+    "name": "Netherite Chestplate",
+    "game": "Block World",
+    "category": "Armor",
+    "rarity": "Legendary",
+    "levelRequired": 30,
+    "value": 5000,
+    "isTradable": false,
+    "stats": {
+      "damage": 0,
+      "defense": 20,
+      "durability": 592
+    },
+    "description": "Heavy armor made from an extremely durable material.",
+    "emoji": "🦺"
+  },
+  {
+    "id": 8,
+    "name": "Portal Gun",
+    "game": "Portal Adventures",
+    "category": "Gadget",
+    "rarity": "Legendary",
+    "levelRequired": 20,
+    "value": 20000,
+    "isTradable": false,
+    "stats": {
+      "range": 100,
+      "energyCost": 15
+    },
+    "description": "Creates linked portals between compatible surfaces.",
+    "emoji": "🌀"
+  },
+  {
+    "id": 9,
+    "name": "Speed Boots",
+    "game": "Fantasy Quest",
+    "category": "Accessory",
+    "rarity": "Rare",
+    "levelRequired": 15,
+    "value": 1800,
+    "isTradable": true,
+    "stats": {
+      "speedBonus": 25,
+      "defense": 5
+    },
+    "description": "Boots that increase movement speed.",
+    "emoji": "👢"
+  },
+  {
+    "id": 10,
+    "name": "Cosmic Crown",
+    "game": "Galaxy Legends",
+    "category": "Accessory",
+    "rarity": "Mythic",
+    "levelRequired": 75,
+    "value": 50000,
+    "isTradable": false,
+    "stats": {
+      "magicPower": 300,
+      "energyBonus": 100
+    },
+    "description": "A mysterious crown said to contain the power of the stars.",
+    "emoji": "👑"
+  },
+  {
+    "id": 11,
+    "name": "Plasma Rifle",
+    "game": "Galaxy Legends",
+    "category": "Weapon",
+    "rarity": "Epic",
+    "levelRequired": 35,
+    "value": 9000,
+    "isTradable": true,
+    "stats": {
+      "damage": 180,
+      "range": 500,
+      "energyCost": 10
+    },
+    "description": "A futuristic rifle that fires concentrated plasma.",
+    "emoji": "🔫"
+  },
+  {
+    "id": 12,
+    "name": "Stealth Cloak",
+    "game": "Galaxy Legends",
+    "category": "Armor",
+    "rarity": "Epic",
+    "levelRequired": 40,
+    "value": 11000,
+    "isTradable": true,
+    "stats": {
+      "defense": 40,
+      "stealthDurationSeconds": 30
+    },
+    "description": "A cloak that briefly makes its wearer invisible.",
+    "emoji": "🥷"
+  },
+  {
+    "id": 13,
+    "name": "Lucky Coin",
+    "game": "Fantasy Quest",
+    "category": "Collectible",
+    "rarity": "Common",
+    "levelRequired": 1,
+    "value": 100,
+    "isTradable": true,
+    "stats": {
+      "luckBonus": 5
+    },
+    "description": "A shiny coin believed to bring good fortune.",
+    "emoji": "🪙"
+  },
+  {
+    "id": 14,
+    "name": "Ancient Dragon Egg",
+    "game": "Fantasy Quest",
+    "category": "Collectible",
+    "rarity": "Mythic",
+    "levelRequired": 60,
+    "value": 75000,
+    "isTradable": false,
+    "stats": {
+      "hatchChance": 10,
+      "powerPotential": 1000
+    },
+    "description": "A rare egg containing a mysterious, powerful creature.",
+    "emoji": "🥚"
+  },
+  {
+    "id": 15,
+    "name": "Repair Kit",
+    "game": "Block World",
+    "category": "Consumable",
+    "rarity": "Common",
+    "levelRequired": 5,
+    "value": 150,
+    "isTradable": true,
+    "stats": {
+      "durabilityRestored": 200
+    },
+    "description": "Repairs damaged equipment.",
+    "emoji": "🔧"
+  }
+]

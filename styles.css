@@ -69,14 +69,16 @@ nav {
 
 .data-container.country-view,
 .data-container.animal-view,
-.data-container.space-view {
+.data-container.space-view,
+.data-container.game-view {
     align-items: stretch;
     justify-content: flex-start;
 }
 
 .country-grid,
 .animal-grid,
-.space-grid {
+.space-grid,
+.item-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
     gap: 1rem;
@@ -86,7 +88,8 @@ nav {
 
 .country-card,
 .animal-card,
-.space-card {
+.space-card,
+.item-card {
     padding: 1.25rem;
     border: 1px solid rgba(52, 32, 26, 0.2);
     border-radius: 0.75rem;
@@ -96,14 +99,16 @@ nav {
 
 .country-card:hover,
 .animal-card:hover,
-.space-card:hover {
+.space-card:hover,
+.item-card:hover {
     border: 1px solid rgb(0, 0, 111);
     transform: scale(1.02);
 }
 
 .country-name,
 .animal-name,
-.space-name {
+.space-name,
+.item-name {
     margin-bottom: 0.75rem;
     color: rgba(0, 8, 49, 0.78);
     font-size: 1.25rem;
@@ -111,7 +116,8 @@ nav {
 
 .country-details,
 .animal-details,
-.space-details {
+.space-details,
+.item-details {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 0.35rem 0.75rem;
@@ -120,14 +126,23 @@ nav {
 
 .country-details dt,
 .animal-details dt,
-.space-details dt {
+.space-details dt,
+.item-details dt {
     font-weight: 700;
 }
 
 .country-details dd,
 .animal-details dd,
-.space-details dd {
+.space-details dd,
+.item-details dd {
     overflow-wrap: anywhere;
+}
+
+.item-description {
+    margin-top: 0.75rem;
+    color: rgba(50, 33, 25, 0.78);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .raw-json-heading {

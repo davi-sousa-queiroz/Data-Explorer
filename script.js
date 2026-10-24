@@ -1,6 +1,7 @@
 import countries from './data/countries.json' with { type: 'json' }
 import animals from './data/animals.json' with { type: 'json' }
 import spaceObjects from './data/planets.json' with { type: 'json' }
+import gameItems from './data/game-items.json' with { type: 'json' }
 
 const dataContainer = document.querySelector('.data-container')
 const countriesTab = document.querySelector('.countries')
@@ -14,6 +15,7 @@ function clearContainer () {
     dataContainer.classList.remove('country-view')
     dataContainer.classList.remove('animal-view')
     dataContainer.classList.remove('space-view')
+    dataContainer.classList.remove('game-view')
 }
 
 function showCountryData () {
@@ -205,6 +207,73 @@ function showSpaceData () {
     dataContainer.append(jsonHeading, jsonCode)
 }
 
+function showGameItems () {
+    clearContainer()
+    dataContainer.classList.add('game-view')
+
+    const heading = document.createElement('h1')
+    heading.className = 'heading'
+    heading.textContent = 'Game Items'
+    dataContainer.append(heading)
+
+    const itemGrid = document.createElement('div')
+    itemGrid.className = 'item-grid'
+
+    gameItems.forEach((item) => {
+        const card = document.createElement('article')
+        card.className = 'item-card'
+
+        const name = document.createElement('h2')
+        name.className = 'item-name'
+        name.textContent = `${item.emoji} ${item.name}`
+        card.append(name)
+
+        const details = document.createElement('dl')
+        details.className = 'item-details'
+
+        const fields = [
+            ['Game', item.game],
+            ['Category', item.category],
+            ['Rarity', item.rarity],
+            ['Level required', item.levelRequired.toLocaleString()],
+            ['Value', item.value.toLocaleString()],
+            ['Tradable', item.isTradable ? 'Yes' : 'No'],
+            ...Object.entries(item.stats).map(([stat, value]) => [
+                stat.replace(/([A-Z])/g, ' $1').replace(/^./, (letter) => letter.toUpperCase()),
+                value.toLocaleString()
+            ])
+        ]
+
+        fields.forEach(([label, value]) => {
+            const term = document.createElement('dt')
+            term.textContent = label
+            const description = document.createElement('dd')
+            description.textContent = value
+            details.append(term, description)
+        })
+
+        const description = document.createElement('p')
+        description.className = 'item-description'
+        description.textContent = item.description
+
+        card.append(details, description)
+        itemGrid.append(card)
+    })
+
+    dataContainer.append(itemGrid)
+
+    const jsonHeading = document.createElement('h2')
+    jsonHeading.className = 'raw-json-heading'
+    jsonHeading.textContent = 'Raw JSON'
+
+    const jsonCode = document.createElement('pre')
+    jsonCode.className = 'raw-json'
+    jsonCode.textContent = JSON.stringify(gameItems, null, 2)
+
+    dataContainer.append(jsonHeading, jsonCode)
+}
+
 countriesTab.addEventListener('click', showCountryData)
 animalsTab.addEventListener('click', showAnimalData)
 spaceTab.addEventListener('click', showSpaceData)
+gamesTab.addEventListener('click', showGameItems)
