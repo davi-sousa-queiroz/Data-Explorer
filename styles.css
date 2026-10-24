@@ -67,12 +67,14 @@ nav {
     line-height: 1.5;
 }
 
-.data-container.country-view {
+.data-container.country-view,
+.data-container.animal-view {
     align-items: stretch;
     justify-content: flex-start;
 }
 
-.country-grid {
+.country-grid,
+.animal-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
     gap: 1rem;
@@ -80,31 +82,36 @@ nav {
     text-align: left;
 }
 
-.country-card {
+.country-card,
+.animal-card {
     padding: 1.25rem;
     border: 1px solid rgba(52, 32, 26, 0.2);
     border-radius: 0.75rem;
     background: rgba(255, 255, 255, 0.72);
 }
 
-.country-name {
+.country-name,
+.animal-name {
     margin-bottom: 0.75rem;
     color: rgba(0, 8, 49, 0.78);
     font-size: 1.25rem;
 }
 
-.country-details {
+.country-details,
+.animal-details {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 0.35rem 0.75rem;
     font-size: 0.9rem;
 }
 
-.country-details dt {
+.country-details dt,
+.animal-details dt {
     font-weight: 700;
 }
 
-.country-details dd {
+.country-details dd,
+.animal-details dd {
     overflow-wrap: anywhere;
 }
 
