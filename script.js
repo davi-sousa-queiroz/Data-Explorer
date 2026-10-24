@@ -1,5 +1,6 @@
 import countries from './data/countries.json' with { type: 'json' }
 import animals from './data/animals.json' with { type: 'json' }
+import spaceObjects from './data/planets.json' with { type: 'json' }
 
 const dataContainer = document.querySelector('.data-container')
 const countriesTab = document.querySelector('.countries')
@@ -12,6 +13,7 @@ function clearContainer () {
     dataContainer.replaceChildren()
     dataContainer.classList.remove('country-view')
     dataContainer.classList.remove('animal-view')
+    dataContainer.classList.remove('space-view')
 }
 
 function showCountryData () {
@@ -132,5 +134,77 @@ function showAnimalData () {
     dataContainer.append(jsonHeading, jsonCode)
 }
 
+function showSpaceData () {
+    clearContainer()
+    dataContainer.classList.add('space-view')
+
+    const heading = document.createElement('h1')
+    heading.className = 'heading'
+    heading.textContent = 'Space and Planets'
+    dataContainer.append(heading)
+
+    const spaceGrid = document.createElement('div')
+    spaceGrid.className = 'space-grid'
+
+    spaceObjects.forEach((object) => {
+        const card = document.createElement('article')
+        card.className = 'space-card'
+
+        const name = document.createElement('h2')
+        name.className = 'space-name'
+        name.textContent = `${object.emoji} ${object.name}`
+        card.append(name)
+
+        const details = document.createElement('dl')
+        details.className = 'space-details'
+
+        const fields = [
+            ['Type', object.type],
+            ['Classification', object.classification],
+            [
+                'Distance from Sun',
+                object.distanceFromSunMillionKm === null
+                    ? 'Unknown'
+                    : `${object.distanceFromSunMillionKm.toLocaleString()} million km`
+            ],
+            ['Diameter', `${object.diameterKm.toLocaleString()} km`],
+            [
+                'Orbital period',
+                object.orbitalPeriodDays === null
+                    ? 'Not applicable'
+                    : `${object.orbitalPeriodDays.toLocaleString()} days`
+            ],
+            ['Moons', object.moons.toLocaleString()],
+            ['Rings', object.hasRings ? 'Yes' : 'No'],
+            ['Atmosphere', object.atmosphere],
+            ['Fun fact', object.funFact]
+        ]
+
+        fields.forEach(([label, value]) => {
+            const term = document.createElement('dt')
+            term.textContent = label
+            const description = document.createElement('dd')
+            description.textContent = value
+            details.append(term, description)
+        })
+
+        card.append(details)
+        spaceGrid.append(card)
+    })
+
+    dataContainer.append(spaceGrid)
+
+    const jsonHeading = document.createElement('h2')
+    jsonHeading.className = 'raw-json-heading'
+    jsonHeading.textContent = 'Raw JSON'
+
+    const jsonCode = document.createElement('pre')
+    jsonCode.className = 'raw-json'
+    jsonCode.textContent = JSON.stringify(spaceObjects, null, 2)
+
+    dataContainer.append(jsonHeading, jsonCode)
+}
+
 countriesTab.addEventListener('click', showCountryData)
 animalsTab.addEventListener('click', showAnimalData)
+spaceTab.addEventListener('click', showSpaceData)
