@@ -2,6 +2,7 @@ import countries from './data/countries.json' with { type: 'json' }
 import animals from './data/animals.json' with { type: 'json' }
 import spaceObjects from './data/planets.json' with { type: 'json' }
 import gameItems from './data/game-items.json' with { type: 'json' }
+import programmingLanguages from './data/programming-languages.json' with { type: 'json' }
 
 const dataContainer = document.querySelector('.data-container')
 const countriesTab = document.querySelector('.countries')
@@ -16,6 +17,7 @@ function clearContainer () {
     dataContainer.classList.remove('animal-view')
     dataContainer.classList.remove('space-view')
     dataContainer.classList.remove('game-view')
+    dataContainer.classList.remove('programming-view')
 }
 
 function showCountryData () {
@@ -273,7 +275,72 @@ function showGameItems () {
     dataContainer.append(jsonHeading, jsonCode)
 }
 
+function showProgrammingLanguages () {
+    clearContainer()
+    dataContainer.classList.add('programming-view')
+
+    const heading = document.createElement('h1')
+    heading.className = 'heading'
+    heading.textContent = 'Programming Languages'
+    dataContainer.append(heading)
+
+    const languageGrid = document.createElement('div')
+    languageGrid.className = 'language-grid'
+
+    programmingLanguages.forEach((language) => {
+        const card = document.createElement('article')
+        card.className = 'language-card'
+
+        const name = document.createElement('h2')
+        name.className = 'language-name'
+        name.textContent = `${language.logo} ${language.name}`
+        card.append(name)
+
+        const details = document.createElement('dl')
+        details.className = 'language-details'
+
+        const fields = [
+            ['Created', language.yearCreated],
+            ['Creator', language.creator],
+            ['Paradigms', language.paradigms.join(', ')],
+            ['Typing', language.typing],
+            ['Difficulty', language.difficulty],
+            ['Primary uses', language.primaryUses.join(', ')],
+            ['Compiled', language.isCompiled ? 'Yes' : 'No'],
+            ['Popularity rank', `#${language.popularityRank}`]
+        ]
+
+        fields.forEach(([label, value]) => {
+            const term = document.createElement('dt')
+            term.textContent = label
+            const description = document.createElement('dd')
+            description.textContent = value
+            details.append(term, description)
+        })
+
+        const description = document.createElement('p')
+        description.className = 'language-description'
+        description.textContent = language.description
+
+        card.append(details, description)
+        languageGrid.append(card)
+    })
+
+    dataContainer.append(languageGrid)
+
+    const jsonHeading = document.createElement('h2')
+    jsonHeading.className = 'raw-json-heading'
+    jsonHeading.textContent = 'Raw JSON'
+
+    const jsonCode = document.createElement('pre')
+    jsonCode.className = 'raw-json'
+    jsonCode.textContent = JSON.stringify(programmingLanguages, null, 2)
+
+    dataContainer.append(jsonHeading, jsonCode)
+}
+
 countriesTab.addEventListener('click', showCountryData)
 animalsTab.addEventListener('click', showAnimalData)
 spaceTab.addEventListener('click', showSpaceData)
 gamesTab.addEventListener('click', showGameItems)
+programmingTab.addEventListener('click', showProgrammingLanguages)
