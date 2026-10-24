@@ -10,6 +10,7 @@ const programmingTab = document.querySelector('.programming')
 function clearContainer () {
     dataContainer.replaceChildren()
     dataContainer.classList.remove('country-view')
+    dataContainer.classList.remove('animal-view')
 }
 
 function showCountryData () {
